@@ -10,6 +10,7 @@ services:
         "humble_brag.app:create_app()"
     environment:
       PYTHONUNBUFFERED: 'true'
+    user: ${CURRENT_UID}
     volumes:
       - '.:/humble_brag'
     ports:

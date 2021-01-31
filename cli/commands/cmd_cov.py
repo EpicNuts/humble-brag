@@ -13,5 +13,5 @@ def cli(path):
     :return: Subprocess call result
     """
 
-    cmd = f'py.test {path}'
+    cmd = f'py.test --cov-report term-missing --cov {path}'
     return subprocess.call(cmd, shell=True)
