@@ -7,10 +7,10 @@ services:
       gunicorn -b 0.0.0.0:8000
         --access-logfile -
         --reload
-        "humbleBrag.app:create_app()"
+        "humble-brag.app:create_app()"
     environment:
       PYTHONUNBUFFERED: 'true'
     volumes:
-      - '.:/humbleBrag'
+      - '.:/humble-brag'
     ports:
       - '8000:8000'
